@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+    <h1>JavaScript callback Functions</h1>
+    <h2>Function sequince</h2>
+    <p>JavaScript Functions executed in the sequince when they are called.</p>
+    <p>The result of the calculation is :</p>
+    <p id="demo"></p>
+
+    <script>
+         function myDisplayer(someThing){
+            document.getElementById("demo").innerHTML = someThing;
+         }
+         function myCalculator(num1,num2,callback){
+            let sum = num1 + num2;
+            callback(sum);
+         }
+         myCalculator(50,20,myDisplayer)
+    </script>
+  </body>
+</html>
